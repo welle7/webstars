@@ -15,7 +15,7 @@
 ## Inhalte
 
 * Tipps&Tricks
-* Webtechniologien
+* Webtechnologien
 * Einzlene Bereiche (Struktur)
 * Links Verzeichnisse
 * Journal
