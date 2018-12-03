@@ -1,0 +1,35 @@
+$bgcolor: #eee;
+$fcolor: #333;
+$gray: #ccc;
+$susy: (
+	columns: 12,
+	container: 1200px,
+	gutters: 1/4, 
+	global-box-sizing: border-box,
+	//debug: (image: show)
+);
+@import "compass/layout/sticky-footer";
+@include sticky-footer(120px, "main", "#layout_footer", "footer");
+@include border-box-sizing;
+.wrapper{
+	@include container;
+}
+body{
+	background: $bgcolor;
+}
+main{
+	@include container;
+}
+header, footer{
+	height: 120px;
+	background: $gray;
+}
+.left{
+	@include span(4);
+}
+.right{
+	@include span(8 last);
+}
+.left, .right{
+	min-height: 400px;
+}

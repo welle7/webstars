@@ -1,0 +1,194 @@
+/*Design Webdstars*/
+/* line 5, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+main {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -120px;
+}
+/* line 18, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+main #layout_footer {
+  height: 120px;
+}
+
+/* line 20, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
+footer {
+  clear: both;
+  position: relative;
+  height: 120px;
+}
+
+/* line 21, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/susy-2.2.14/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../scss/inc/_general.scss */
+.wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/susy-2.2.14/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 17, ../scss/inc/_general.scss */
+body {
+  background: #eee;
+}
+
+/* line 20, ../scss/inc/_general.scss */
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/susy-2.2.14/sass/susy/output/support/_clearfix.scss */
+main:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 23, ../scss/inc/_general.scss */
+header, footer {
+  height: 120px;
+  background: #ccc;
+}
+
+/* line 27, ../scss/inc/_general.scss */
+.left {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 30, ../scss/inc/_general.scss */
+.right {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 33, ../scss/inc/_general.scss */
+.left, .right {
+  min-height: 400px;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../scss/inc/_fonts.scss */
+body {
+  font-family: robotoregular, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+/* line 22, ../scss/inc/_fonts.scss */
+p {
+  margin: 1.6rem 0;
+}
+
+/* line 25, ../scss/inc/_fonts.scss */
+h1 {
+  font-size: 3.2rem;
+  line-height: 120px;
+  color: #eee;
+}
+/* line 29, ../scss/inc/_fonts.scss */
+h1 span {
+  color: gold;
+}
+
+/* line 33, ../scss/inc/_fonts.scss */
+h2 {
+  font-size: 2.6rem;
+  margin: 1.8rem 0;
+}
