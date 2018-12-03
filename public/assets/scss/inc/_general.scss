@@ -8,7 +8,7 @@ $susy: (
 	global-box-sizing: border-box,
 	//debug: (image: show)
 );
-@import "compass/layout/sticky-footer";
+@import "compass/layout.scss";
 @include sticky-footer(120px, "main", "#layout_footer", "footer");
 @include border-box-sizing;
 .wrapper{
@@ -16,9 +16,6 @@ $susy: (
 }
 body{
 	background: $bgcolor;
-}
-main{
-	@include container;
 }
 header, footer{
 	height: 120px;
