@@ -5,5 +5,6 @@
 			<p>Footereintrag</p>
 		</div>
 	</footer>
+<script src="<?php echo $js; ?>prism.js"></script>
 </body>
 </html>

@@ -1,12 +1,18 @@
 <?php
 require('public/config.php');
 include($inc .'header.php');
+?>
+
+<video autoplay id='video' loop='loop' muted='muted' preload='auto'>
+<source src='<?php echo $media; ?>service.mp4' type='video/mp4' />
+<source src='<?php echo $media; ?>service.webm' type='video/webm' /> 
+
+Sorry, your browser does not support HTML5 video.
+
+</video>
 
 
-$out = "<h2>Hier ist ein Titel</h2>";
-$out.= "<p>Das ist der Pfad zu CSS: $css</p>";
-$out.= "<p>Das ist \"nochmal\" ein Absatz</p>";
-
-echo $out;
+<?php
+echo "</div>";
 include($inc .'footer.php');
 ?>

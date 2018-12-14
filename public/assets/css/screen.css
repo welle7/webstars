@@ -117,7 +117,7 @@ body {
 /* line 20, ../scss/inc/_general.scss */
 header, footer {
   height: 120px;
-  background: #ccc;
+  background: transparent;
 }
 
 /* line 24, ../scss/inc/_general.scss */
@@ -137,6 +137,20 @@ header, footer {
 /* line 30, ../scss/inc/_general.scss */
 .left, .right {
   min-height: 400px;
+}
+
+/* line 33, ../scss/inc/_general.scss */
+#video {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  background: #333;
 }
 
 @font-face {
@@ -178,4 +192,207 @@ h1 span {
 h2 {
   font-size: 2.6rem;
   margin: 1.8rem 0;
+}
+
+/* PrismJS 1.15.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+markup-templating+markdown+perl+php+sass&plugins=line-numbers */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 9, ../scss/inc/_prism.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 32, ../scss/inc/_prism.scss */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 38, ../scss/inc/_prism.scss */
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 45, ../scss/inc/_prism.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 52, ../scss/inc/_prism.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+/* line 58, ../scss/inc/_prism.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+/* line 64, ../scss/inc/_prism.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+/* line 70, ../scss/inc/_prism.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 77, ../scss/inc/_prism.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 81, ../scss/inc/_prism.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 85, ../scss/inc/_prism.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+/* line 95, ../scss/inc/_prism.scss */
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+/* line 104, ../scss/inc/_prism.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #9a6e3a;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 113, ../scss/inc/_prism.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 119, ../scss/inc/_prism.scss */
+.token.function,
+.token.class-name {
+  color: #DD4A68;
+}
+
+/* line 124, ../scss/inc/_prism.scss */
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+/* line 130, ../scss/inc/_prism.scss */
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+/* line 134, ../scss/inc/_prism.scss */
+.token.italic {
+  font-style: italic;
+}
+
+/* line 138, ../scss/inc/_prism.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 142, ../scss/inc/_prism.scss */
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 148, ../scss/inc/_prism.scss */
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+/* line 153, ../scss/inc/_prism.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 170, ../scss/inc/_prism.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 176, ../scss/inc/_prism.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
 }
