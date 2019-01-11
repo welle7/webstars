@@ -5,7 +5,6 @@ include($inc .'header.php');
 $out = "<div class='wrapper'>";
 //Wurde das Formular gesendet?
 if(isset($_POST['submit']));{
-
     //Ist das Formular ausgefüllt?
     if ($_POST['username'] == '') {
        $out.= "<p>kein Username eingetragen</p>";
@@ -21,6 +20,9 @@ if(isset($_POST['submit']));{
 
      }
      else {$out.="Username oder Passwort falsch"; }
+}
+if(empty($_POST)) {
+   header("Location:index.php");
 }
 $out.= "</div>";
 echo $out;
