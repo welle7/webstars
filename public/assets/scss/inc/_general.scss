@@ -1,6 +1,7 @@
 $bgcolor: #eee;
 $fcolor: #333;
 $gray: #ccc;
+$hf: orange;
 $susy: (
 	columns: 12,
 	container: 1200px,
@@ -19,7 +20,7 @@ body{
 }
 header, footer{
 	height: 120px;
-	background: transparent;
+	background: $hf;
 }
 .left{
 	@include span(4);

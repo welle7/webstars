@@ -1,0 +1,63 @@
+input,
+textarea {
+    font-size: 1.25rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    background: transparent;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    border: 1px solid $fcolor;
+    width: 100%
+}
+
+textarea {
+    float: right;
+    min-height: 105px;
+}
+
+label {
+    display: block;
+}
+
+input[type="submit"],
+button[type="submit"],
+button {
+    background: transparent;
+    padding: 10px 30px;
+    border: 1px solid $fcolor;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: $bgcolor;
+    background: $fcolor;
+    font-size: 1em;
+    clear: both;
+    &:hover {
+        background: $bgcolor;
+        color: $fcolor;
+    }
+}
+
+select {
+    border: 1px solid $fcolor;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background: transparent;
+    font-size: 1.25rem;
+    color: $fcolor;
+    background: url(br_down.png) no-repeat right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position-x: 244px;
+}
+
+#suche {
+    display: inline-block;
+    float: left;
+    margin: 1em 2px;
+}

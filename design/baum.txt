@@ -1,0 +1,43 @@
+.
+├── baum.txt
+├── design
+│   ├── design.html
+│   ├── projekt.md
+│   ├── projekt.png
+│   ├── seite2.php
+│   └── test.html
+├── index.php
+└── public
+    ├── assets
+    │   ├── config.rb
+    │   ├── css
+    │   │   ├── ie.css
+    │   │   ├── print.css
+    │   │   ├── screen.css
+    │   │   └── screen.min.css
+    │   ├── fonts
+    │   │   ├── roboto-regular-webfont.woff
+    │   │   ├── roboto-regular-webfont.woff2
+    │   │   ├── ubuntu-regular-webfont.woff
+    │   │   └── ubuntu-regular-webfont.woff2
+    │   ├── js
+    │   │   └── prism.js
+    │   ├── media
+    │   │   ├── service.mp4
+    │   │   └── service.webm
+    │   └── scss
+    │       ├── ie.scss
+    │       ├── inc
+    │       │   ├── _fonts.scss
+    │       │   ├── _forms.scss
+    │       │   ├── _general.scss
+    │       │   ├── _nav.scss
+    │       │   └── _prism.scss
+    │       ├── print.scss
+    │       └── screen.scss
+    ├── config.php
+    └── inc
+        ├── footer.php
+        └── header.php
+
+10 directories, 30 files

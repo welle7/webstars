@@ -9,4 +9,7 @@ $js = $url . $template . "/js/";
 $media = $url . $template . "/media/";
 $inc = $_SERVER['DOCUMENT_ROOT'] . $pfad . "public/inc/";
 
+//Login
+$user = "Andy";
+$pass = "bern";
 ?>
