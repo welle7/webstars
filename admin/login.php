@@ -4,7 +4,7 @@ require('../public/config.php');
 include($inc .'header.php');
 $out = "<div class='wrapper'>";
 //Wurde das Formular gesendet?
-if(isset($_POST['submit']));{
+if(isset($_POST['submit'])){
     //Ist das Formular ausgefüllt?
     if ($_POST['username'] == '') {
        $out.= "<p>kein Username eingetragen</p>";
@@ -13,16 +13,30 @@ if(isset($_POST['submit']));{
         $out.= "<p>kein Passwort eingetragen</p>";
      }
      //User
-     if ($_POST['username'] == $user && $_POST['passwort'] == $pass){
-        $_SESSION['user'] = $_POST['username'];
-        $_SESSION['log'] = true;
-        $out.= "Hallo " .  $_SESSION['user'] . " Du bist eingeloggt";
+    $passwort = $_POST['passwort'];
+    $passwort = hash('sha256', $salt.$passwort);
+    $username = $_POST['username'];
 
-     }
-     else {$out.="Username oder Passwort falsch"; }
+  // Mysql connection mit prepare Statement vorbereiten
+  $stmt = $mysqli->prepare('SELECT user_id FROM user WHERE passwort = ? AND username = ?');
+  $stmt->bind_param("ss", $passwort, $username);
+  // ausführen
+  $stmt->execute();
+  $stmt->bind_result($user_id );
+  if (!empty($stmt->fetch())) {
+    //wenn das fetch nicht leer ist, haben wir ein Resultat. Somit stimmt der Passwort-Hash
+    //Setzen wir nach erfolgreichem Login eine Session
+    $_SESSION['user'] = $_POST['username'];
+    $_SESSION['log'] = true;
+    $out.= "Hallo " .  $_SESSION['user'] . " Du bist eingeloggt <br> <a href='logout.php'>Logout</a>";
+  } else
+  //wenn das fetch leer ist, haben wir kein Resultat. Somit stimmt der Passwort-Hash nicht
+  //zurück auf Feld 1
+  header("Location:index.php");
+$mysqli->close();
 }
 if(empty($_POST)) {
-   header("Location:index.php");
+ header("Location:index.php");
 }
 $out.= "</div>";
 echo $out;

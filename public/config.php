@@ -9,7 +9,12 @@ $js = $url . $template . "/js/";
 $media = $url . $template . "/media/";
 $inc = $_SERVER['DOCUMENT_ROOT'] . $pfad . "public/inc/";
 
-//Login
-$user = "Andy";
-$pass = "bern";
+$salt = "DasistSalz,wasdasPasswortebensalztund_dasabernichtzuwenig__ztgk688nmbfdr";
+
+
+//Datenbank connect
+$mysqli = new mysqli("localhost", "root", "", "webstars");
+if ($mysqli->connect_errno) {
+$sqlerror= "Verbindung fehlgeschlagen: " . $mysqli->connect_error;
+}
 ?>

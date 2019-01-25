@@ -6,10 +6,12 @@ $out = "<div class='wrapper'>";
 
 //Arrays
 $out.="<h2>Einfaches Array</h2>";
-$blumen = array("Rose", "Tulpe", "Nelke", "Sonnenblume");
+$blumen = array("Rose", "Tulpe", "Nelke", "Sonnenblume", "Krokus");
+echo $blumen[2];
+
 $out.="<ul>";
-foreach ($blumen as $blume) {
-    $out.= "<li>$blume</li>";
+foreach ($blumen as $bern) {
+    $out.= "<li>$bern</li>";
 }
 $out.= "<ul>";
 
