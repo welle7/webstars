@@ -1,0 +1,34 @@
+/*TABLES*/
+table {
+    color: #333;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid transparent;
+    /* No more visible border */
+    height: 30px;
+  }
+  
+  th {
+    background: #DFDFDF;
+    /* Darken header a bit */
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  td {
+    background: #FAFAFA;
+  }
+  /* Cells in even rows (2,4,6...) are one color */
+  tr:nth-child(even) td {
+    background: #F1F1F1;
+  }
+  /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+  tr:nth-child(odd) td {
+    background: #FEFEFE;
+  }

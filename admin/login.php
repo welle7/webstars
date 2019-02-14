@@ -24,6 +24,8 @@ if(isset($_POST['submit'])){
   $stmt->execute();
   $stmt->bind_result($user_id );
   if (!empty($stmt->fetch())) {
+    $result = $stmt -> get_result();
+
     //wenn das fetch nicht leer ist, haben wir ein Resultat. Somit stimmt der Passwort-Hash
     //Setzen wir nach erfolgreichem Login eine Session
     $_SESSION['user'] = $_POST['username'];
@@ -32,11 +34,16 @@ if(isset($_POST['submit'])){
   } else
   //wenn das fetch leer ist, haben wir kein Resultat. Somit stimmt der Passwort-Hash nicht
   //zurück auf Feld 1
-  header("Location:index.php");
+
+  //header("Location:index.php");
+  $out.="<h3>Passwort oder Username falsch! Zurück zu 
+  <a href='index.php'>Login</a></h3>";
 $mysqli->close();
 }
 if(empty($_POST)) {
- header("Location:index.php");
+ //header("Location:index.php");
+ $out.="<h3>Passwort oder Username nicht ausgefüllt! Zurück zu 
+  <a href='index.php'>Login</a></h3>";
 }
 $out.= "</div>";
 echo $out;

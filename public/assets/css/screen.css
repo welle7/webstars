@@ -1,4 +1,4 @@
-/*Design Webdstars*/
+/*Design Webstars*/
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -168,27 +168,26 @@ header, footer {
 /* line 17, ../scss/inc/_fonts.scss */
 body {
   font-family: robotoregular, sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
 }
 
-/* line 22, ../scss/inc/_fonts.scss */
+/* line 21, ../scss/inc/_fonts.scss */
 p {
   margin: 1.6rem 0;
 }
 
-/* line 25, ../scss/inc/_fonts.scss */
+/* line 24, ../scss/inc/_fonts.scss */
 h1 {
   font-size: 3.2rem;
   line-height: 120px;
   color: #eee;
 }
-/* line 29, ../scss/inc/_fonts.scss */
+/* line 28, ../scss/inc/_fonts.scss */
 h1 span {
   color: gold;
 }
 
-/* line 33, ../scss/inc/_fonts.scss */
+/* line 32, ../scss/inc/_fonts.scss */
 h2 {
   font-size: 2.6rem;
   margin: 1.8rem 0;
@@ -268,6 +267,49 @@ select {
   margin: 1em 2px;
 }
 
+/*TABLES*/
+/* line 2, ../scss/inc/_table.scss */
+table {
+  color: #333;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* line 9, ../scss/inc/_table.scss */
+td,
+th {
+  border: 1px solid transparent;
+  /* No more visible border */
+  height: 30px;
+}
+
+/* line 16, ../scss/inc/_table.scss */
+th {
+  background: #DFDFDF;
+  /* Darken header a bit */
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* line 24, ../scss/inc/_table.scss */
+td {
+  background: #FAFAFA;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+/* line 28, ../scss/inc/_table.scss */
+tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+/* line 32, ../scss/inc/_table.scss */
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+
 /* PrismJS 1.15.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+markup-templating+markdown+perl+php+sass&plugins=line-numbers */
 /**
@@ -329,7 +371,7 @@ pre[class*="language-"] {
 /* line 58, ../scss/inc/_prism.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #f5f2f0;
+  background: #eee;
 }
 
 /* Inline code */
