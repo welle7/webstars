@@ -9,7 +9,7 @@ if (!isset($_GET['start']) or !is_numeric($_GET['start'])) {
     $start = (int)$_GET['start'];
   }
 //start query
-$sql = "SELECT id, titel, sprache, inhalt FROM content LIMIT $start, 2";
+$sql = "SELECT id, titel, sprache, inhalt FROM content WHERE aktiv = 1 LIMIT $start, 3";
 $result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
     // Zeilenweise Ausgabe mit while
@@ -19,9 +19,9 @@ if ($result->num_rows > 0) {
     }
     //pagination  achtung Schritte, z.B ($start+10)
     //Weiter blättern
-    $out.='<a href="'.$_SERVER['PHP_SELF'].'?start='.($start+2).'">Weiter</a>';
+    $out.='<a href="'.$_SERVER['PHP_SELF'].'?start='.($start+3).'">Weiter</a>';
     //zurück blättern
-    $prev = $start - 2;
+    $prev = $start - 3;
     if ($prev >= 0)
     $out.='<a href="'.$_SERVER['PHP_SELF'].'?start='.$prev.'">Zurück</a>';
 } else {

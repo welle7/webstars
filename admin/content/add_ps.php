@@ -48,9 +48,10 @@ else {
     $titel = mysqli_real_escape_string($mysqli, $_POST['titel']);
     $snippet = $_POST['snippet'];
     $sprache = mysqli_real_escape_string($mysqli, $_POST['sprache']);
+    $aktiv = 2;
     // Vorbereiten und Verknüpfen
-    $stmt = $mysqli->prepare("INSERT INTO content (titel, sprache, inhalt) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $titel, $sprache, $snippet);
+    $stmt = $mysqli->prepare("INSERT INTO content (titel, sprache, inhalt, aktiv) VALUES (?, ?, ?,?)");
+    $stmt->bind_param("sssi", $titel, $sprache, $snippet, $aktiv);
     $stmt->execute();
     $stmt->close();
     $out.=" Alles eingetragen";

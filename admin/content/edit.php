@@ -6,14 +6,14 @@ $out ='<div class="wrapper">';
 $out.="<h2>Snippets ändern oder Löschen</h2>";
 if(!isset($_GET['edit'])){
 //Zeige alle Datensätze 
-$sql = "SELECT id, titel, datum FROM content";
+$sql = "SELECT * FROM content";
 $result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
     // Zeilenweise Ausgabe mit while
     $out.="<table>\n";
     while($row = $result->fetch_assoc()) {
         $out.= "<tr><td> ID: " . $row["id"] . "</td><td>" . $row["titel"] . 
-        "</td><td>" . $row["datum"]. 
+        "</td><td>" . $row["datum"] . "</td><td> aktiv? " . $row["aktiv"] .
         "</td><td><a href='?del=". $row["id"] . "'>löschen </a>
         </td><td><a href='?edit=". $row["id"] . "'>edieren</a>
         </td></tr>\n";
@@ -35,7 +35,7 @@ if(isset($_GET['del'])){
 //Zuerst Datensatz in Formularfelder einlesen.
 if(isset($_GET['edit'])){
     $id= $_GET['edit'];
-    $sql = "SELECT titel, sprache, inhalt FROM content WHERE id = $id";
+    $sql = "SELECT titel, sprache, inhalt, aktiv FROM content WHERE id = $id";
     $result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
     // Zeilenweise Ausgabe mit while
@@ -43,6 +43,7 @@ if ($result->num_rows > 0) {
     $out.="<form action='#' method='POST'>\n";
     while($row = $result->fetch_assoc()) {
         $out.= "<input type='text' name='titel' value='" . $row["titel"] . 
+        "'>\n<input type='text' name='aktiv' value='" . $row["aktiv"] .
         "'>\n<input type='text' name='sprache' value='" . $row["sprache"] .
         "'>\n<textarea name ='content' cols='35' rows='8'>" . $row["inhalt"]. 
         "\n</textarea>\n<input type='submit' name='edieren' value='edieren'>";
@@ -53,9 +54,10 @@ if ($result->num_rows > 0) {
        $titel = $_POST['titel'];
        $sprache = $_POST['sprache'];
        $inhalt = $_POST['content'];
+       $aktiv = $_POST['aktiv'];
 
-       $sql = $mysqli->prepare("UPDATE content SET titel=?, sprache=?, inhalt=? WHERE ID=?");
-       $sql->bind_param('sssi', $titel, $sprache, $inhalt, $id);
+       $sql = $mysqli->prepare("UPDATE content SET  aktiv=?, titel=?, sprache=?, inhalt=? WHERE ID=?");
+       $sql->bind_param('isssi', $titel, $sprache, $inhalt, $id, $aktiv);
        $results =  $sql->execute();
        if($results){
            $out.= 'Der Datensatz wurde neu gespeichert.'; 
