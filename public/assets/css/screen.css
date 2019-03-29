@@ -206,20 +206,20 @@ input[type="email"],
 textarea {
   background: transparent;
   padding: 8px 0;
-  margin-bottom: 10px;
   border: 1px solid #333;
   width: 100%;
 }
 
-/* line 17, ../scss/inc/_forms.scss */
+/* line 16, ../scss/inc/_forms.scss */
 textarea {
   float: right;
   min-height: 105px;
 }
 
-/* line 22, ../scss/inc/_forms.scss */
+/* line 21, ../scss/inc/_forms.scss */
 label {
   display: block;
+  margin-top: 26px;
 }
 
 /* line 26, ../scss/inc/_forms.scss */
@@ -262,9 +262,75 @@ select {
 
 /* line 59, ../scss/inc/_forms.scss */
 #suche {
-  display: inline-block;
   float: left;
   margin: 1em 2px;
+}
+
+/* line 64, ../scss/inc/_forms.scss */
+#userform {
+  max-width: 640px;
+  margin: auto;
+}
+
+/* line 68, ../scss/inc/_forms.scss */
+label.error {
+  color: #f23c3c;
+  margin-top: 0;
+}
+
+/* line 69, ../scss/inc/_forms.scss */
+label.valid {
+  color: #91d64d;
+}
+
+/* line 70, ../scss/inc/_forms.scss */
+input.error {
+  border-color: #f23c3c;
+  color: #f23c3c;
+}
+
+/* line 71, ../scss/inc/_forms.scss */
+input.valid {
+  border-color: #91d64d;
+}
+
+/* line 72, ../scss/inc/_forms.scss */
+.password-meter-label {
+  color: #666;
+}
+
+/* line 75, ../scss/inc/_forms.scss */
+.password-meter {
+  vertical-align: middle;
+}
+
+/* line 78, ../scss/inc/_forms.scss */
+.password-meter-message {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  padding-left: 5px;
+  background: #eee;
+}
+
+/* line 85, ../scss/inc/_forms.scss */
+.password-meter-message-very-weak {
+  background: #d9534f;
+}
+
+/* line 88, ../scss/inc/_forms.scss */
+.password-meter-message-weak {
+  background: #f0ad4e;
+}
+
+/* line 91, ../scss/inc/_forms.scss */
+.password-meter-message-good {
+  background: #5bc0de;
+}
+
+/* line 94, ../scss/inc/_forms.scss */
+.password-meter-message-strong {
+  background: #5cb85c;
 }
 
 /*TABLES*/

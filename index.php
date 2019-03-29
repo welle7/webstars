@@ -2,6 +2,7 @@
 $out = "";
 require('public/config.php');
 include($inc .'header.php');
+$out.= "<div class='wrapper'>";
 //get variable setzten für Pagination
 if (!isset($_GET['start']) or !is_numeric($_GET['start'])) {
     $start = 0;

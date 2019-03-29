@@ -9,7 +9,6 @@ input[type="email"],
 textarea {
     background: transparent;
     padding: 8px 0;
-    margin-bottom: 10px;
     border: 1px solid $fcolor;
     width: 100%
 }
@@ -21,6 +20,7 @@ textarea {
 
 label {
     display: block;
+    margin-top: 26px;
 }
 
 input[type="submit"],
@@ -57,7 +57,40 @@ select {
 }
 
 #suche {
-    display: inline-block;
     float: left;
     margin: 1em 2px;
+}
+// Form Validation
+#userform{
+    max-width: 640px;
+    margin: auto;
+}
+label.error{color:#f23c3c; margin-top: 0}
+label.valid{color:#91d64d;}
+input.error{border-color:#f23c3c;color:#f23c3c; }
+input.valid{border-color:#91d64d;}
+.password-meter-label {
+  color: #666;
+}
+.password-meter {
+  vertical-align: middle;
+}
+.password-meter-message {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  padding-left: 5px;
+  background: #eee;
+}
+.password-meter-message-very-weak {
+  background: #d9534f;
+}
+.password-meter-message-weak {
+  background: #f0ad4e;
+}
+.password-meter-message-good {
+  background: #5bc0de;
+}
+.password-meter-message-strong {
+  background: #5cb85c;
 }

@@ -12,7 +12,7 @@ $out ='<div class="wrapper">';
 if(!isset($_POST['senden'])) {
 $out.= <<<DOC
 	<h2>User erfassen</h2>
-    <form action="#" method="POST">
+    <form action="#" method="POST" id="userform">
     <label for="vorname">Vorname</label>
     <input type="text" name="vorname" id="vorname">
     <label for="nachname">Nachname</label>
@@ -23,6 +23,9 @@ $out.= <<<DOC
 	<input type="email" name="mail" id="mail">
 	<label for="passwort">Passwort</label>
     <input type="password" name="passwort" id="passwort">
+    <label class="password-meter-label" for="password">Passwortstärke:</label>
+    <div class="password-meter">
+        <div class="password-meter-message">&nbsp;</div></div>
     <label for="passwort2">Passwort wiederholen</label>
 	<input type="password" name="passwort2" id="passwort2">
 	<input type="submit" name="senden">
@@ -66,5 +69,5 @@ else {
     }
 }
 echo $out;
-include($inc .'footer.php');
+include($inc .'adminfooter.php');
 ?>
