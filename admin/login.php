@@ -19,9 +19,17 @@ if(isset($_POST['submit'])){
 
   // Mysql connection mit prepare Statement vorbereiten
   $stmt = $mysqli->prepare('SELECT user_id FROM user WHERE passwort = ? AND username = ?');
-  $stmt->bind_param("ss", $passwort, $username);
-  // ausführen
-  $stmt->execute();
+  if ( false===$stmt ) {
+    die('prepare() failed: ' . htmlspecialchars($mysqli->error));
+  }
+  $rc = $stmt->bind_param("ss", $passwort, $username);
+  if ( false===$rc ) {
+    die('bind_param() failed: ' . htmlspecialchars($stmt->error));
+  }
+  $rc = $stmt->execute();
+  if ( false===$rc ) {
+    die('execute() failed: ' . htmlspecialchars($stmt->error));
+  }
   $stmt->bind_result($user_id );
   if (!empty($stmt->fetch())) {
     $result = $stmt -> get_result();

@@ -1,580 +1,76 @@
-/*Design Webstars*/
-/* line 5, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Error: Invalid CSS after "    float: left": expected "{", was ";"
+        on line 60 of /Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/inc/_forms.scss
+        from line 7 of /Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/screen.scss
 
-/* line 22, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
+55:     appearance: none;
+56:     background-position-x: 244px;
+57: }
+58: 
+59: #suche {3
+60:     float: left;
+61:     margin: 1em 2px;
+62: }
+63: // Form Validation
+64: #userform{
+65:     max-width: 640px;
 
-/* line 24, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 10, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-html, body {
-  height: 100%;
-}
-
-/* line 12, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-main {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -120px;
-}
-/* line 18, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-main #layout_footer {
-  height: 120px;
-}
-
-/* line 20, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/layout/_sticky-footer.scss */
-footer {
-  clear: both;
-  position: relative;
-  height: 120px;
-}
-
-/* line 21, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/susy-2.2.14/sass/susy/language/susy/_box-sizing.scss */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 15, ../scss/inc/_general.scss */
-.wrapper {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 12, ../../../../../../../../Library/Ruby/Gems/2.3.0/gems/susy-2.2.14/sass/susy/output/support/_clearfix.scss */
-.wrapper:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-/* line 18, ../scss/inc/_general.scss */
-body {
-  background: #eee;
-}
-
-/* line 21, ../scss/inc/_general.scss */
-header, footer {
-  height: 120px;
-  background: orange;
-}
-
-/* line 25, ../scss/inc/_general.scss */
-.left {
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%;
-}
-
-/* line 28, ../scss/inc/_general.scss */
-.right {
-  width: 66.10169%;
-  float: right;
-  margin-right: 0;
-}
-
-/* line 31, ../scss/inc/_general.scss */
-.left, .right {
-  min-height: 400px;
-}
-
-/* line 34, ../scss/inc/_general.scss */
-#video {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  overflow: hidden;
-  background: #333;
-}
-
-@font-face {
-  font-family: 'robotoregular';
-  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ubunturegular';
-  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 17, ../scss/inc/_fonts.scss */
-body {
-  font-family: robotoregular, sans-serif;
-  font-size: 1rem;
-}
-
-/* line 21, ../scss/inc/_fonts.scss */
-p {
-  margin: 1.6rem 0;
-}
-
-/* line 24, ../scss/inc/_fonts.scss */
-h1 {
-  font-size: 3.2rem;
-  line-height: 120px;
-  color: #eee;
-}
-/* line 28, ../scss/inc/_fonts.scss */
-h1 span {
-  color: gold;
-}
-
-/* line 32, ../scss/inc/_fonts.scss */
-h2 {
-  font-size: 2.6rem;
-  margin: 1.8rem 0;
-}
-
-/* line 1, ../scss/inc/_forms.scss */
-input,
-textarea {
-  font-size: 1.25rem;
-}
-
-/* line 6, ../scss/inc/_forms.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea {
-  background: transparent;
-  padding: 8px 0;
-  border: 1px solid #333;
-  width: 100%;
-}
-
-/* line 16, ../scss/inc/_forms.scss */
-textarea {
-  float: right;
-  min-height: 105px;
-}
-
-/* line 21, ../scss/inc/_forms.scss */
-label {
-  display: block;
-  margin-top: 26px;
-}
-
-/* line 26, ../scss/inc/_forms.scss */
-input[type="submit"],
-button[type="submit"],
-button {
-  background: transparent;
-  padding: 10px 30px;
-  border: 1px solid #333;
-  margin-bottom: 10px;
-  cursor: pointer;
-  color: #eee;
-  background: #333;
-  font-size: 1em;
-  clear: both;
-}
-/* line 38, ../scss/inc/_forms.scss */
-input[type="submit"]:hover,
-button[type="submit"]:hover,
-button:hover {
-  background: #eee;
-  color: #333;
-}
-
-/* line 44, ../scss/inc/_forms.scss */
-select {
-  border: 1px solid #333;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  background: transparent;
-  font-size: 1.25rem;
-  color: #333;
-  background: url(br_down.png) no-repeat right;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-position-x: 244px;
-}
-
-/* line 59, ../scss/inc/_forms.scss */
-#suche {
-  float: left;
-  margin: 1em 2px;
-}
-
-/* line 64, ../scss/inc/_forms.scss */
-#userform {
-  max-width: 640px;
-  margin: auto;
-}
-
-/* line 68, ../scss/inc/_forms.scss */
-label.error {
-  color: #f23c3c;
-  margin-top: 0;
-}
-
-/* line 69, ../scss/inc/_forms.scss */
-label.valid {
-  color: #91d64d;
-}
-
-/* line 70, ../scss/inc/_forms.scss */
-input.error {
-  border-color: #f23c3c;
-  color: #f23c3c;
-}
-
-/* line 71, ../scss/inc/_forms.scss */
-input.valid {
-  border-color: #91d64d;
-}
-
-/* line 72, ../scss/inc/_forms.scss */
-.password-meter-label {
-  color: #666;
-}
-
-/* line 75, ../scss/inc/_forms.scss */
-.password-meter {
-  vertical-align: middle;
-}
-
-/* line 78, ../scss/inc/_forms.scss */
-.password-meter-message {
-  text-align: center;
-  font-weight: bold;
-  color: black;
-  padding-left: 5px;
-  background: #eee;
-}
-
-/* line 85, ../scss/inc/_forms.scss */
-.password-meter-message-very-weak {
-  background: #d9534f;
-}
-
-/* line 88, ../scss/inc/_forms.scss */
-.password-meter-message-weak {
-  background: #f0ad4e;
-}
-
-/* line 91, ../scss/inc/_forms.scss */
-.password-meter-message-good {
-  background: #5bc0de;
-}
-
-/* line 94, ../scss/inc/_forms.scss */
-.password-meter-message-strong {
-  background: #5cb85c;
-}
-
-/*TABLES*/
-/* line 2, ../scss/inc/_table.scss */
-table {
-  color: #333;
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-/* line 9, ../scss/inc/_table.scss */
-td,
-th {
-  border: 1px solid transparent;
-  /* No more visible border */
-  height: 30px;
-}
-
-/* line 16, ../scss/inc/_table.scss */
-th {
-  background: #DFDFDF;
-  /* Darken header a bit */
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-}
-
-/* line 24, ../scss/inc/_table.scss */
-td {
-  background: #FAFAFA;
-}
-
-/* Cells in even rows (2,4,6...) are one color */
-/* line 28, ../scss/inc/_table.scss */
-tr:nth-child(even) td {
-  background: #F1F1F1;
-}
-
-/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-/* line 32, ../scss/inc/_table.scss */
-tr:nth-child(odd) td {
-  background: #FEFEFE;
-}
-
-/* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+markup-templating+markdown+perl+php+sass&plugins=line-numbers */
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-/* line 9, ../scss/inc/_prism.scss */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
+Backtrace:
+/Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/inc/_forms.scss:60
+/Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/screen.scss:7
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:665:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:674:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
   white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* line 32, ../scss/inc/_prism.scss */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-/* line 38, ../scss/inc/_prism.scss */
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-@media print {
-  /* line 45, ../scss/inc/_prism.scss */
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
-}
-/* Code blocks */
-/* line 52, ../scss/inc/_prism.scss */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-}
-
-/* line 58, ../scss/inc/_prism.scss */
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #eee;
-}
-
-/* Inline code */
-/* line 64, ../scss/inc/_prism.scss */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-}
-
-/* line 70, ../scss/inc/_prism.scss */
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: slategray;
-}
-
-/* line 77, ../scss/inc/_prism.scss */
-.token.punctuation {
-  color: #999;
-}
-
-/* line 81, ../scss/inc/_prism.scss */
-.namespace {
-  opacity: .7;
-}
-
-/* line 85, ../scss/inc/_prism.scss */
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #905;
-}
-
-/* line 95, ../scss/inc/_prism.scss */
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #690;
-}
-
-/* line 104, ../scss/inc/_prism.scss */
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #9a6e3a;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* line 113, ../scss/inc/_prism.scss */
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a;
-}
-
-/* line 119, ../scss/inc/_prism.scss */
-.token.function,
-.token.class-name {
-  color: #DD4A68;
-}
-
-/* line 124, ../scss/inc/_prism.scss */
-.token.regex,
-.token.important,
-.token.variable {
-  color: #e90;
-}
-
-/* line 130, ../scss/inc/_prism.scss */
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-/* line 134, ../scss/inc/_prism.scss */
-.token.italic {
-  font-style: italic;
-}
-
-/* line 138, ../scss/inc/_prism.scss */
-.token.entity {
-  cursor: help;
-}
-
-/* line 142, ../scss/inc/_prism.scss */
-pre[class*="language-"].line-numbers {
-  position: relative;
-  padding-left: 3.8em;
-  counter-reset: linenumber;
-}
-
-/* line 148, ../scss/inc/_prism.scss */
-pre[class*="language-"].line-numbers > code {
-  position: relative;
-  white-space: inherit;
-}
-
-/* line 153, ../scss/inc/_prism.scss */
-.line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  font-size: 100%;
-  left: -3.8em;
-  width: 3em;
-  /* works for line-numbers below 1000 lines */
-  letter-spacing: -1px;
-  border-right: 1px solid #999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* line 170, ../scss/inc/_prism.scss */
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
-}
-
-/* line 176, ../scss/inc/_prism.scss */
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
-}
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    float: left\": expected \"{\", was \";\"\A         on line 60 of /Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/inc/_forms.scss\A         from line 7 of /Applications/XAMPP/xamppfiles/htdocs/webstars/public/assets/scss/screen.scss\A \A 55:     appearance: none;\A 56:     background-position-x: 244px;\A 57: }\A 58: \A 59: #suche {3\A 60:     float: left;\A 61:     margin: 1em 2px;\A 62: }\A 63: // Form Validation\A 64: #userform{\A 65:     max-width: 640px;"; }
