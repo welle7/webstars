@@ -2,7 +2,7 @@ var $jq = jQuery.noConflict();
 $jq(document).ready(function() {
 //eigene Methoden
 	jQuery.validator.addMethod("namen", function(value, element)
-	{	return this.optional(element) || /^[a-zA-ZüÜäÄöÖéèàâç ]*$/.test(value);
+	{	return this.optional(element) || /^[A-Za-züÜäÄöÖéèàâç. ]*$/.test(value);
 	},	"Ungültige Zeichen!")
 	jQuery.validator.classRuleSettings.namen = {namen: true};
 
@@ -22,11 +22,12 @@ $jq(document).ready(function() {
 	rules: {
 	vorname: {
 		required: true,
-		minlength:2
+		minlength:2,
+		namen: true
 		},
 	nachname: {
 		required: true,
-		namen: true,
+		name: true,
 		minlength:3
 		},
 	username: {

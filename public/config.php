@@ -1,4 +1,8 @@
 <?php
+//Error Reporting nur für Testbetrieb verwenden
+// Danach entfernen.
+error_reporting(E_ALL | E_STRICT); 
+ini_set('display_errors', -1);
 // Pfade
 $pfad = "/webstars/"; //hier Pfad angeben
 $template = "public/assets"; //hier Design angeben

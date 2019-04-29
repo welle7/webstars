@@ -1,5 +1,11 @@
 <?php
-
+//Eingeloggt?
+session_start();
+if ( !isset($_SESSION['user']) and $_SESSION['log'] != true )
+{
+// Nicht eingeloggt, zurück zum Login
+    header("Location:../index.php"); 
+}
 require('../../public/config.php');
 include($inc .'header.php');
 $out ='<div class="wrapper">';
@@ -56,13 +62,13 @@ if ($result->num_rows > 0) {
        $inhalt = $_POST['content'];
        $aktiv = $_POST['aktiv'];
 
-       $sql = $mysqli->prepare("UPDATE content SET  aktiv=?, titel=?, sprache=?, inhalt=? WHERE ID=?");
-       $sql->bind_param('isssi', $titel, $sprache, $inhalt, $id, $aktiv);
+       $sql = $mysqli->prepare("UPDATE content SET  titel=?, sprache=?, inhalt=?, aktiv=? WHERE ID=?");
+       $sql->bind_param('sssii', $titel, $sprache, $inhalt, $aktiv, $id);
        $results =  $sql->execute();
        if($results){
            $out.= 'Der Datensatz wurde neu gespeichert.'; 
        }else{
-           $oput.= 'Error : ('. $mysqli->errno .') '. $mysqli->error;
+           $out.= 'Error : ('. $mysqli->errno .') '. $mysqli->error;
        }
         //$sql = "UPDATE titel, sprache, inhalt FROM content WHERE id = $id";
     }
